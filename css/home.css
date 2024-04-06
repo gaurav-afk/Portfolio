@@ -1,0 +1,152 @@
+
+body, ul {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    background-color: transparent;
+}
+
+nav ul li {
+    font-family: 'Courier New', Courier, monospace;
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.4s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: blueviolet;
+}
+
+.text-overlay {
+    font-size: 50px;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; 
+    background-color: transparent;
+    z-index: 1; 
+}
+
+.attached-div {
+    flex: 1;
+    display: flex; 
+    align-items: center; 
+    width: 100%;
+    height: 450px;
+    background-image: url('../assets/img/back2.png');
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    margin-top: 0;
+}
+
+#pfpImage {
+    width: 250px;
+    height: 250px;
+    margin-left: 50px;
+    border-radius: 100px;
+    border-radius: 50%; /* Make the image round */
+    box-shadow: 0 0 50px 10px blueviolet;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background-image: url('path/to/your/background-image.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animatedTextContainer,
+.animatedTextContainerSub {
+    margin: 0;
+    padding: 0;
+}
+
+.animatedTextContainer {
+  display: inline-block;
+  height: 0;
+  align-self: center;
+}
+
+.animatedTextContainerSub {
+    display: inline-block;
+    height: 0;
+    align-self: center;
+}
+
+.animatedText {
+    font-size: 3em;
+    letter-spacing: 5px;
+    font-family: monospace;
+    width: 0;
+    color: greenyellow;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(23) 1s forwards,
+    .4s steps(24) alternate;
+}
+
+.animatedTextSub {
+    font-size: 1.2em;
+    letter-spacing: 2.5px;
+    color: green;
+    font-family: monospace;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20) 4s forwards,
+    .4s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; 
+    }
+}
+
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px 0 blueviolet;
+    }
+    50% {
+        box-shadow: 0 0 20px 10px blueviolet;
+    }
+    100% {
+        box-shadow: 0 0 10px 0 blueviolet;
+    }
+}
