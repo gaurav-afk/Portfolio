@@ -17,19 +17,146 @@
             </ul>
         </nav>
 
+        <!-- First Section --------------------------------------------------------------------->
         <div class="attached-div">
             <img src="assets/img/pfp.jpg" id="pfpImage">
         </div>
 
         <div class="animatedTextContainer">
-            <p class="animatedText">Hey👋 my name is GAURAV.</p>
+            <p class="animatedText">Hi👋 my name is GAURAV.</p>
         </div>
         <div class="animatedTextContainerSub">
             <p class="animatedTextSub">Aka the app wizard🪄✨</p>
         </div>
-   
+
+
+
+        <!-- Projects Section  ------------------------------------------------------------------>
+        <h1 id="project-heading">PROJECTS</h1>
+        <div class="project-section-div">
+
+            <div class="project-div">
+                <img src="assets/img/photosharing_App.jpg" id="projectImg" />
+                <p class="project-title">Photo sharing App</p>
+                <p class="project-description">This app allows users to post photos and write description about it. Users can also follow other users.</p>
+                <a href="https://github.com/gaurav-afk/Photo_sharing_app" target="_blank" style="text-decoration: none; color: black;" >
+                <div class="github-link">
+                    <p class="github-link-text">Github</p>
+                    <img src="assets/img/github.png" class="githubImg" />
+                </div>
+                </a>
+            </div>
+
+            <div class="project-div">
+                <img src="assets/img/ForRentApp.jpg" id="projectImg" />
+                <p class="project-title">ForRentalApp</p>
+                <p class="project-description">Rental app allows the landlord to rent their property and Tenants to shortlist property.</p>
+                <a href="https://github.com/gaurav-afk/ForRental" target="_blank" style="text-decoration: none; color: black;" >
+                <div class="github-link">
+                    <p class="github-link-text">Github</p>
+                    <img src="assets/img/github.png" class="githubImg" />
+                </div>
+                </a>
+            </div>
+
+            <div class="project-div">
+                <img src="assets/img/foodManagingSite2.jpeg" id="projectImg" />
+                <p class="project-title">Food managing site</p>
+                <p class="project-description">This website allows restaurant owner to manage their orders. They can also see the current status of the orders and assign orders to delivery man. Includes history page where delivered ordered can be seen with uploaded photos of delivery.</p>
+                <a href="https://github.com/gaurav-afk/Food-Delivery-Site" target="_blank" style="text-decoration: none; color: black;" >
+                <div class="github-link">
+                    <p class="github-link-text">Github</p>
+                    <img src="assets/img/github.png" class="githubImg" />
+                </div>
+                </a>
+            </div>
+
+            <div class="project-div">
+                <img src="assets/img/restaurantRatingApp.jpeg" id="projectImg" />
+                <p class="project-title">Restaurant Rating App</p>
+                <p class="project-description">Allows user to rate restaurants. User can comment and rate the restaurants. These comment and rating will be visible to other users.</p>
+                <a href="https://github.com/gaurav-afk/restaurant-rating-ios-app" target="_blank" style="text-decoration: none; color: black;" >
+                <div class="github-link">
+                    <p class="github-link-text">Github</p>
+                    <img src="assets/img/github.png" class="githubImg" />
+                </div>
+                </a>
+            </div>
+ 
+            <div class="project-div">
+                <img src="assets/img/RenterApp.jpg" id="projectImg" />
+                <p class="project-title">Renter App</p>
+                <p class="project-description">RenterApp, the innovative car rental app. Whether you're planning a road trip, or just need a quick ride across town, RenterApp puts the power to book the perfect car right at your fingertips.</p>
+                <a href="https://github.com/gaurav-afk/RenterApp" target="_blank" style="text-decoration: none; color: black;" >
+                <div class="github-link">
+                    <p class="github-link-text">Github</p>
+                    <img src="assets/img/github.png" class="githubImg" />
+                </div>
+                </a>
+            </div>
+
+            <div class="project-div">
+                <img src="assets/img/carOwnerApp3.webp" id="projectImg" />
+                <p class="project-title">Car Owner App</p>
+                <p class="project-description">Car Owner App, a powerful platform that enables car owners to list their vehicles worldwide and manage bookings seamlessly.</p>
+                <a href="https://github.com/gaurav-afk/CarOwnerApp" target="_blank" style="text-decoration: none; color: black;" >
+                <div class="github-link">
+                    <p class="github-link-text">Github</p>
+                    <img src="assets/img/github.png" class="githubImg" />
+                </div>
+                </a>
+            </div>
+
+            <div class="project-div">
+                <img src="assets/img/guru4.jpeg" id="projectImg" />
+                <p class="project-title">Guru App</p>
+                <p class="project-description">An app for academy coaches allowing them to effortlessly manage the players attendance or fees.</p>
+                <a href="https://apps.apple.com/in/app/ffsports-guru/id6443445368" target="_blank" style="text-decoration: none; color: black;" >
+                <div class ="github-link">
+                    <p class="github-link-text">App Store</p>
+                    <img src="assets/img/AppStoreImg.png" class="githubImg" />
+                </div>
+                </a>
+            </div>
+
+            <div class="project-div">
+                <img src="assets/img/trackeriOS5.jpg" id="projectImg" />
+                <p class="project-title">Tracker iOS</p>
+                <p class="project-description">Revolutionizing app allowing users to track other users location.</p>
+                <a href="https://github.com/gaurav-afk/" target="_blank" style="text-decoration: none; color: black;" >
+                <div class="github-link">
+                    <p class="github-link-text">Github</p>
+                    <img src="assets/img/github.png" class="githubImg" />
+                </div>
+                </a>
+            </div>
+
+        </div>
+
+
     </header>
 
-    <script src="js/animation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const githubLinks = document.querySelectorAll('.project-div');
+        
+            githubLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    document.querySelectorAll('.project-div').forEach(div => {
+                        if (!link.closest('.project-div').isSameNode(div)) {
+                            div.classList.add('stand-out-effect');
+                        }
+                    });
+                });
+        
+                link.addEventListener('mouseout', () => {
+                    document.querySelectorAll('.project-div').forEach(div => {
+                        div.classList.remove('stand-out-effect');
+                    });
+                });
+            });
+        });
+        </script>
+        
 </body>
 </html>
