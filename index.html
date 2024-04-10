@@ -10,16 +10,17 @@
     <header>
         <nav id="nav">
             <ul>
-                <li><a href="#">&lt;/main&gt;</a></li>
-                <li><a href="#tech-stack-heading">About</a></li>
+                <li><a href="#tech-stack-heading">&lt;/main&gt;</a></li>
+                <li><a href="#about-me-heading">About</a></li>
                 <li><a href="#project-heading">Projects</a></li>
                 <li><a href="#">Contact</a></li>
+                <!-- <li><a href="resume.html">Resume</a></li> -->
             </ul>
         </nav>
 
         <!-- First Section --------------------------------------------------------------------->
         <div class="attached-div">
-            <img src="assets/img/pfp.jpg" id="pfpImage">
+            <img src="assets/img/pfp2.jpg" id="pfpImage">
         </div>
 
         <div class="animatedTextContainer">
@@ -29,9 +30,7 @@
             <p class="animatedTextSub">Aka the app wizard🪄✨</p>
         </div>
 
-
-
-
+        
         <!-- Teck Stack ----------------------------------------------------------------------->
 
 
@@ -59,6 +58,22 @@
 
 
 
+
+
+        <!-- About Section ----------------------------------------------------------------------->
+
+        
+        <div class="about-container-back">
+            <h1 id="about-me-heading">About Me</h1>
+         <div class="about-container">
+            <p id="about-me-text">Mobile app developer with 1.5 years of experience at VSM Technologies Pvt Ltd, where I have built and deployed several Android and iOS applications using the Flutter framework.
+                <br><br> I have also contributed to the design and testing of the apps, ensuring that they meet the user's needs and expectations and it is compliant with the industry standards and best practices. 
+                Immersed in the world of mobile application development and strategy at George Brown College, I'm honing my skills in designing, developing, and testing native mobile apps.
+                <br><br>I aim to join a company that values originality, teamwork, and excellence, where I can channel my passion for mobile development to create meaningful and compelling solutions. Let's connect and shape the future collaboratively!<br></p>
+        </div>
+        </div>
+
+
         <!-- Projects Section  ------------------------------------------------------------------>
         <h1 id="project-heading">PROJECTS</h1>
         <div class="project-section-div">
@@ -77,7 +92,7 @@
 
             <div class="project-div">
                 <img src="assets/img/ForRentApp.jpg" id="projectImg" />
-                <p class="project-title">ForRentalApp</p>
+                <p class="project-title">For Rental App</p>
                 <p class="project-description">Rental app allows the landlord to rent their property and Tenants to shortlist property.</p>
                 <a href="https://github.com/gaurav-afk/ForRental" target="_blank" style="text-decoration: none; color: black;" >
                 <div class="github-link">
@@ -162,6 +177,11 @@
         </div>
 
 
+        
+        <footer class="footer">
+
+            <p>&copy; 2024 No Company. All rights reserved ✅</p>
+        </footer>
 
     </header>
 
@@ -185,6 +205,37 @@
                 });
             });
         });
+ 
+        document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('#nav ul li a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            const hrefAttribute = link.getAttribute('href');
+
+            // Check if the href attribute value starts with '#'
+            if (hrefAttribute.startsWith('#')) {
+                e.preventDefault(); // Prevent default anchor behavior
+
+                const targetSection = document.querySelector(hrefAttribute);
+                if (targetSection) {
+                    // Calculate offset top of the target section
+                    const offsetTop = targetSection.offsetTop;
+
+                    // Scroll smoothly to the target section
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth' // Use smooth scrolling behavior
+                    });
+                }
+            }
+            // If the href does not start with '#', let the browser handle it normally.
+            // No else statement needed here, as the default behavior will not be prevented.
+        });
+    });
+});
+
+
         </script>
         
 </body>
