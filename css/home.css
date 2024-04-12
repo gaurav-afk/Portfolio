@@ -1,11 +1,17 @@
 :root {
-    --primary-color: blueviolet;
+    /* --primary-color: blueviolet;
     --primary-color-light: violet;
     --secondary-color: aquamarine;
-    --secondary-color-dark: rgb(41, 229, 166);
+    --secondary-color-dark: rgb(41, 229, 166); */
+
+    --primary-color: #F6D776;
+    --primary-color-light: #FAEF9B;
+    --secondary-color: #6DA4AA;
+    --secondary-color-dark: #647D87;
 
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 body, ul {
     background-color: black;
@@ -46,16 +52,17 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color-dark);
 }
 
 .attached-div {
     flex: 1;
     display: flex; 
     align-items: center; 
+    justify-content: flex-end;
     width: 100%;
     height: 450px;
-    background-image: url('../assets/img/back3.png');
+    background-image: url('../assets/img/back1.jpg');
     background-position: center;
     background-size: cover;
     background-color: transparent;
@@ -65,7 +72,7 @@ nav ul li a:hover {
 #pfpImage {
     width: 20vw;
     height: auto;
-    margin-left: 50px;
+    margin-right: 50px;
     border-radius: 100px;
     border-radius: 30%; 
     box-shadow: 0 0 50px 10px var(--primary-color);
@@ -95,7 +102,7 @@ nav ul li a:hover {
     letter-spacing: 4px;
     font-family: var(--font-family);
     width: 0;
-    color: greenyellow;
+    color: var(--primary-color);
     white-space: nowrap;
     overflow: hidden;
     animation: typing 3s steps(22) 1s forwards,
@@ -105,7 +112,7 @@ nav ul li a:hover {
 .animatedTextSub {
     font-size: 1.2em;
     letter-spacing: 2.5px;
-    color: green;
+    color: var(--primary-color-light);
     font-family: var(--font-family);
     width: 0;
     white-space: nowrap;
@@ -164,7 +171,7 @@ nav ul li a:hover {
 
 #projectImg {
     width: 100%;
-    height: 20em; 
+    height: 19em; 
     display: block;
     margin-top: 0;
 }
@@ -201,7 +208,7 @@ nav ul li a:hover {
 }
 
 .github-link:hover {
-    border: var(--primary-color-light) 5px solid;
+    border: var(--primary-color) 5px solid;
 }
 
 
@@ -229,8 +236,7 @@ nav ul li a:hover {
 
 #tech-stack-heading {
     font-size: 5vw;
-    margin-top: 5vw;
-    padding-top: 5vw;
+    padding-top: 17vw;
     color: #fff;
     text-align: center;
     font-family: var(--font-family);
@@ -246,7 +252,6 @@ nav ul li a:hover {
 
 #tech-stack {
     padding-top: 2vw;
-    padding-bottom: 2vw;
     width: 80%;
     height: auto; 
     display: flex;
@@ -256,11 +261,10 @@ nav ul li a:hover {
     gap: 3vw; 
     background-color: rgb(19, 1, 1);
     border-radius: 20px;
-    /* border: 10px solid gray; */
 }
 
 #tech-stack:hover {
-    box-shadow: inset 0 0 20px 50px var(--primary-color-light);
+    box-shadow: inset 0 0 20px 50px var(--secondary-color);
     transition: box-shadow 0.2s ease;
 }
 
@@ -272,60 +276,7 @@ nav ul li a:hover {
 
 
 
-/* Resume Css ********************************************************************/
 
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (Image) */
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-  }
-  
-  /* Caption of Modal Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
-  
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
 
 /* about ********************************************************************/
 
@@ -339,17 +290,17 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     #about-me-heading {
-        font-size: 7vw; /* Adjust font size for smaller screens */
-        margin-top: 10vw; /* Reduce top margin on smaller screens */
-        padding-top: 8vw; /* Reduce top padding on smaller screens */
+        font-size: 7vw; 
+        margin-top: 10vw; 
+        padding-top: 8vw; 
     }
 }
 
 @media (max-width: 576px) {
     #about-me-heading {
-        font-size: 9vw; /* Further adjust font size for smallest screens */
-        margin-top: 5vw; /* Further reduce top margin on smallest screens */
-        padding-top: 6vw; /* Further reduce top padding on smallest screens */
+        font-size: 9vw; 
+        margin-top: 5vw; 
+        padding-top: 6vw; 
     }
 }
 
@@ -358,31 +309,32 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Use height: 100% for full height */
+    height: 100%; 
 }
 
 .about-container {
     color: var(--primary-color-light);
     width: 80%;
-    max-width: 800px; /* Limit maximum width for larger screens */
+    max-width: 800px; 
     text-align: center;
 }
 
 #about-me-text {
     font-size: 20px;
     font-family: var(--font-family);
-    line-height: 1.6; /* Improve line height for better readability */
+    line-height: 1.6; 
+    margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
     .about-container {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 90%;
     }
 }
 
 @media (max-width: 576px) {
     .about-container {
-        width: 95%; /* Further adjust width for smallest screens */
+        width: 95%; 
     }
 }
 
@@ -396,6 +348,65 @@ nav ul li a:hover {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+
+
+/* Resume css ***********************************************************************************/
+
+
+#resume-heading {
+    font-size: 5vw;
+    padding-top: 10vw;
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-family);
+    margin-bottom: 100px;
+}
+
+.resume-container {
+    background-color: var(--secondary-color);
+    margin: auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+header h1 {
+    margin: 0;
+    color: seashell;
+}
+header #pTag {
+    color: aliceblue;
+    margin: 5px 0;
+}
+section {
+    margin-top: 20px;
+    text-align: start;
+}
+h2 {
+    border-bottom: 2px solid var(--secondary-color-dark);
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: var(--primary-color-light);
+}
+.experience-item h3, .education-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+ul {
+    list-style: none;
+    background-color: var(--secondary-color-dark);
+    padding: 20px;
+    border-radius: 20px;
+}
+li {
+    margin-bottom: 10px;
 }
 
 
