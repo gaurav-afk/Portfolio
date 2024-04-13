@@ -244,16 +244,12 @@
         <header>
           <h1>Gaurav Rawat</h1>
           <p class="pTag">Mobile App Developer</p>
-          <p class="pTag">
-            Email: gaurav.rawat1080@gmail.com | Phone: (437) 662-4418 |
-            LinkedIn: https://www.linkedin.com/in/gaurav-rawat12/
-          </p>
         </header>
 
         <section>
           <h2>Experience</h2>
           <div class="experience-item">
-            <h3>Mobile App Developer — VSM Technologies</h3>
+            <h3 class="subHeadResume">Mobile App Developer — VSM Technologies</h3>
             <p class="pTag"><strong>February 2022 - July 2023</strong></p>
             <ul>
               <li>
@@ -287,10 +283,15 @@
         <section>
           <h2>Education</h2>
           <div class="education-item">
-            <h3>Bachelor of Computer applications</h3>
+            <h3 class="subHeadResume">Mobile Application Development and Strategy Program</h3>
             <p>
-              <strong>Jagganath Institute of Management Sciences VK2</strong>
-              2019 — 2022
+              <strong>George Brown College  ( 2023 — 2024 )</strong>
+             
+            </p>
+            <h3 class="subHeadResume">Bachelor of Computer applications</h3>
+            <p>
+              <strong>Jagganath Institute of Management Sciences VK2
+                ( 2019 — 2022 )</strong>
             </p>
           </div>
         </section>
@@ -319,7 +320,7 @@
           </ul>
         </section>
       </div>
-      `
+      
 
       <footer class="footer">
         <p>&copy; 2024 No Company. All rights reserved ✅</p>
@@ -327,17 +328,6 @@
     </header>
 
     <script>
-      function openPdfPopup() {
-        const pdfUrl = "https://example.com/sample.pdf"; // Change this to the URL of your PDF file
-        const popupName = "PdfPopupWindow";
-        const popupFeatures = "width=800,height=600,left=100,top=100";
-        const pdfWindow = window.open(pdfUrl, popupName, popupFeatures);
-
-        // Optional: Focus on the popup window if it's already open
-        if (pdfWindow) {
-          pdfWindow.focus();
-        }
-      }
       document.addEventListener("DOMContentLoaded", () => {
         const githubLinks = document.querySelectorAll(".project-div");
 
@@ -365,24 +355,19 @@
           link.addEventListener("click", (e) => {
             const hrefAttribute = link.getAttribute("href");
 
-            // Check if the href attribute value starts with '#'
             if (hrefAttribute.startsWith("#")) {
-              e.preventDefault(); // Prevent default anchor behavior
+              e.preventDefault(); 
 
               const targetSection = document.querySelector(hrefAttribute);
               if (targetSection) {
-                // Calculate offset top of the target section
                 const offsetTop = targetSection.offsetTop;
 
-                // Scroll smoothly to the target section
                 window.scrollTo({
                   top: offsetTop,
-                  behavior: "smooth", // Use smooth scrolling behavior
+                  behavior: "smooth",
                 });
               }
             }
-            // If the href does not start with '#', let the browser handle it normally.
-            // No else statement needed here, as the default behavior will not be prevented.
           });
         });
       });
