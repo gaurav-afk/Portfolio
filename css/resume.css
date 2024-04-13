@@ -1,0 +1,59 @@
+#resume-heading {
+    font-size: 5vw;
+    padding-top: 10vw;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.resume-container {
+    background-color: var(--secondary-color);
+    margin: auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header {
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    color: seashell;
+}
+header #pTag {
+    color: aliceblue;
+    margin: 5px 0;
+}
+
+.subHeadResume {
+ color: orange;
+}
+
+section {
+    margin-top: 20px;
+    text-align: start;
+}
+h2 {
+    border-bottom: 2px solid var(--secondary-color-dark);
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: var(--primary-color-light);
+}
+.experience-item , .education-item  {
+    margin-top: 0;
+    color: #333;
+}
+ul {
+    color: var(--primary-color-light);
+    list-style: none;
+    opacity: 0.8;
+    background-color: var(--secondary-color-dark);
+    padding: 20px;
+    border-radius: 20px;
+}
+li {
+    margin-bottom: 10px;
+}
+
