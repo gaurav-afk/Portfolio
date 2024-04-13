@@ -1,13 +1,4 @@
 :root {
-    /* --primary-color: blueviolet;
-    --primary-color-light: violet;
-    --secondary-color: aquamarine;
-    --secondary-color-dark: rgb(41, 229, 166); */
-
-    /* --primary-color: #F6D776;
-    --primary-color-light: #FAEF9B;
-    --secondary-color: #6DA4AA;
-    --secondary-color-dark: #647D87; */
 
     --primary-color: #f86742;
     --primary-color-light: #e6e6e6;
@@ -107,7 +98,7 @@ nav ul li a:hover {
 /* intro-text ***************************************************************************************************************************************************/
 .animatedTextContainer,
 .animatedTextContainerSub {
-    margin: 0;
+    margin-left: 3vw;
     padding: 0;
 }
 
