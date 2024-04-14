@@ -57,3 +57,15 @@ li {
     margin-bottom: 10px;
 }
 
+.achievementResume {
+    font-size: small;
+    color: #C6EBC5;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; } 
+    50% { opacity: 0.3; } 
+    100% { opacity: 1; } 
+  }
+ 
