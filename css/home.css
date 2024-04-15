@@ -122,7 +122,7 @@ nav ul li a:hover {
     color: var(--primary-color);
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 3s steps(22) 1s forwards;
+    animation: typing 3s steps(23) 1s forwards;
 }
 
 .animatedTextSub {
