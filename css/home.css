@@ -101,28 +101,31 @@ nav ul li a:hover {
     margin-left: 3vw;
     padding: 0;
 }
+  
+.animatedText {
+    font-size: 5vw;
+    letter-spacing: 4px;
+    font-weight: bold;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(23) 1s forwards;
+    background-image: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
 .animatedTextContainer {
-  display: inline-block;
-  height: 0;
-  align-self: center;
-}
+    display: inline-block;
+    height: 0;
+    align-self: center;
+} 
 
 .animatedTextContainerSub {
     display: inline-block;
     height: 0;
     align-self: center;
-}
-
-
-.animatedText {
-    font-size: 3vw;
-    letter-spacing: 4px;
-    width: 0;
-    color: var(--primary-color);
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(23) 1s forwards;
 }
 
 .animatedTextSub {
@@ -132,7 +135,7 @@ nav ul li a:hover {
     width: 0;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 3s steps(21) 4s forwards;
+    animation: typing 2.5s steps(21) 4s forwards;
 } 
 
 
