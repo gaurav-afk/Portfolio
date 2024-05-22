@@ -150,6 +150,7 @@ nav ul li a:hover {
 
 /* footer ***************************************************************************************************************************************************/
 
+
 #footer {
     background-color: #333;
     color: #fff;
@@ -160,18 +161,36 @@ nav ul li a:hover {
     padding-bottom: 6vw;
 }
 
-
 .contactImg {
     height: 3vw;
     width: 3vw;
 }
 
-
 .contactMeDiv {
     padding-top: 4vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
 }
+
+.contactMeDiv > * {
+    flex-basis: calc(33.33% - 20px); 
+    margin: 10px; 
+}
+
+
+@media screen and (max-width: 768px) {
+    .contactImg {
+        height: 8vw; 
+        width: 8vw;
+    }
+
+    .contactMeDiv > * {
+        flex-basis: calc(50% - 20px); 
+    }
+}
+
+
 
 
 
