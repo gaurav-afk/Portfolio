@@ -1,12 +1,25 @@
-:root {
-
-    --primary-color: #f86742;
+/* :root {
+    --nav-color: #5252dd;
+    --primary-color: #d1d1ff;
     --primary-color-light: #e6e6e6;
     --secondary-color-dark: #525860;
     --secondary-color: #5f6569;
+    --project-secondary-color-dark: #34373a;
+    --project-secondary-color: #424649;
 
+} */
+
+:root {
+    --nav-color: #6fbd72;
+    --primary-color: #8cca8e;
+    --primary-color-light: #e6e6e6;
+    --secondary-color-dark: #525860;
+    --secondary-color: #5f6569;
+    --project-secondary-color-dark: #34373a;
+    --project-secondary-color: #424649;
+    --intro-primary-color: #aad8ab;
+    --intro-secondary-color: #8cca8e;
 }
-
 
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -55,7 +68,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: var(--primary-color);
+    background-color: var(--nav-color);
 }
 
 
@@ -96,7 +109,9 @@ nav ul li a:hover {
 
 
 /* intro-text ***************************************************************************************************************************************************/
-.animatedTextContainer,
+
+/* old effect for intro text */
+/* .animatedTextContainer,
 .animatedTextContainerSub {
     margin-left: 3vw;
     padding: 0;
@@ -120,7 +135,262 @@ nav ul li a:hover {
     display: inline-block;
     height: 0;
     align-self: center;
+}  */
+
+/* new glitch effect for intro text */
+.animatedTextContainer {
+    margin-left: 3vw;
+    padding: 0;
+    display: inline-block;
+    align-self: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.animatedText {
+    font-size: 5vw;
+    letter-spacing: 4px;
+    font-weight: bold;
+    white-space: nowrap;
+    /* background-image: linear-gradient(to right, #ff8a00, #e52e71); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+    animation: glitch-skew 2s infinite;
+}
+
+.animatedText::before,
+.animatedText::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #6fbd72, #a3a3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    clip-path: inset(0 0 0 0);
+}
+
+.animatedText::after {
+    z-index: -2;
+    animation: glitch-2 1.5s infinite linear alternate-reverse;
+    color: blue;
+    opacity: 0.6;
+    transform: scale(1.02);
+}
+
+.animatedText::after {
+    z-index: -2;
+    animation: glitch-4 1.5s infinite linear alternate-reverse;
+    color: blue;
+    opacity: 0.6;
+    transform: scale(1.02);
+}
+
+
+@keyframes glitch-1 {
+    0% {
+        clip-path: inset(20% 0 75% 0);
+        transform: translate(-3px, -3px) skewX(-10deg);
+    }
+    10% {
+        clip-path: inset(0 0 85% 0);
+        transform: translate(3px, 3px) skewX(10deg);
+    }
+    20% {
+        clip-path: inset(15% 0 70% 0);
+        transform: translate(-2px, -2px);
+    }
+    30% {
+        clip-path: inset(50% 0 30% 0);
+        transform: translate(3px, 0);
+    }
+    40% {
+        clip-path: inset(25% 0 65% 0);
+        transform: translate(-3px, 5px);
+    }
+    50% {
+        clip-path: inset(75% 0 15% 0);
+        transform: translate(3px, -5px);
+    }
+    60% {
+        clip-path: inset(5% 0 90% 0);
+        transform: translate(-5px, 5px) skewX(-10deg);
+    }
+    70% {
+        clip-path: inset(85% 0 0 0);
+        transform: translate(5px, -5px);
+    }
+    80% {
+        clip-path: inset(30% 0 40% 0);
+        transform: translate(-3px, 0);
+    }
+    90% {
+        clip-path: inset(65% 0 25% 0);
+        transform: translate(0, 3px);
+    }
+    100% {
+        clip-path: inset(10% 0 85% 0);
+        transform: translate(3px, -3px);
+    }
+}
+
+@keyframes glitch-2 {
+    0% {
+        clip-path: inset(10% 0 70% 0);
+        transform: translate(3px, 3px) skewX(5deg);
+    }
+    10% {
+        clip-path: inset(80% 0 0 0);
+        transform: translate(-3px, -3px) skewX(-5deg);
+    }
+    20% {
+        clip-path: inset(30% 0 60% 0);
+        transform: translate(3px, -3px);
+    }
+    30% {
+        clip-path: inset(55% 0 25% 0);
+        transform: translate(-3px, 0);
+    }
+    40% {
+        clip-path: inset(0 0 85% 0);
+        transform: translate(5px, 5px);
+    }
+    50% {
+        clip-path: inset(25% 0 65% 0);
+        transform: translate(-5px, -5px) skewX(-5deg);
+    }
+    60% {
+        clip-path: inset(60% 0 30% 0);
+        transform: translate(5px, 5px) skewX(5deg);
+    }
+    70% {
+        clip-path: inset(90% 0 5% 0);
+        transform: translate(-5px, 0);
+    }
+    80% {
+        clip-path: inset(40% 0 45% 0);
+        transform: translate(0, -5px);
+    }
+    90% {
+        clip-path: inset(20% 0 75% 0);
+        transform: translate(-5px, 5px);
+    }
+    100% {
+        clip-path: inset(60% 0 25% 0);
+        transform: translate(5px, -5px);
+    }
+}
+
+
+/* .animatedTextContainer {
+    margin-left: 3vw;
+    padding: 0;
+    display: inline-block;
+    align-self: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.animatedText {
+    font-size: 5vw;
+    letter-spacing: 4px;
+    font-weight: bold;
+    white-space: nowrap;
+    background-image: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    animation: glitch-skew 1s infinite;
+}
+
+.animatedText::before,
+.animatedText::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    clip-path: inset(0 0 0 0);
+}
+
+.animatedText::before {
+    z-index: -1;
+    animation: glitch-1 1s infinite linear alternate-reverse;
+}
+
+.animatedText::after {
+    z-index: -2;
+    animation: glitch-2 1s infinite linear alternate-reverse;
+}
+
+
+*/
+@keyframes glitch-3 {
+    0% {
+        clip-path: inset(10% 0 85% 0);
+        transform: translate(-5px, -5px);
+    }
+    20% {
+        clip-path: inset(85% 0 5% 0);
+        transform: translate(5px, 5px);
+    }
+    40% {
+        clip-path: inset(50% 0 30% 0);
+        transform: translate(-5px, 0);
+    }
+    60% {
+        clip-path: inset(20% 0 70% 0);
+        transform: translate(0, 5px);
+    }
+    80% {
+        clip-path: inset(65% 0 25% 0);
+        transform: translate(5px, -5px);
+    }
+    100% {
+        clip-path: inset(10% 0 85% 0);
+        transform: translate(-5px, 5px);
+    }
+}
+
+@keyframes glitch-4 {
+    0% {
+        clip-path: inset(50% 0 10% 0);
+        transform: translate(5px, 5px);
+    }
+    20% {
+        clip-path: inset(10% 0 80% 0);
+        transform: translate(-5px, -5px);
+    }
+    40% {
+        clip-path: inset(30% 0 40% 0);
+        transform: translate(5px, 0);
+    }
+    60% {
+        clip-path: inset(70% 0 10% 0);
+        transform: translate(0, -5px);
+    }
+    80% {
+        clip-path: inset(25% 0 65% 0);
+        transform: translate(-5px, 5px);
+    }
+    100% {
+        clip-path: inset(50% 0 10% 0);
+        transform: translate(5px, -5px);
+    }
 } 
+
+
+ /* experiment */
 
 .animatedTextContainerSub {
     display: inline-block;
